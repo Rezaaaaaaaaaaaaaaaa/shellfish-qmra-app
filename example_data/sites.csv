@@ -1,0 +1,6 @@
+Site_Name,Effluent_Min,Effluent_Median,Effluent_Max,WWTP_Log_Removal,Meal_Size_g,Num_People,Iterations
+Test_Beach_A,1,1000,100000,2,50,100,1000
+Test_Beach_B,1,1000,100000,2,50,100,1000
+Test_Beach_C,1,1000,100000,2,50,100,1000
+Test_Beach_D,1,1000,100000,2,50,100,1000
+Test_Beach_E,1,1000,100000,2,50,100,1000
