@@ -556,14 +556,13 @@ def check_data_quality(sites_df, dilutions_df):
     }
 
 
-@st.cache_data(show_spinner=False)
 def generate_word_report(display_df, percentile_df, all_results, quality_report=None,
                          fig_bar=None, fig_box_inf=None, fig_box_ill=None,
                          fig_hist_inf=None, fig_hist_ill=None, fig_cdf_inf=None, fig_cdf_ill=None):
     """
     Generate a comprehensive Word report with tables and embedded plots
 
-    Note: Cached for performance - Word generation only runs once per unique input
+    Note: No caching (Plotly figures are not serializable)
 
     Parameters:
     -----------
