@@ -789,13 +789,27 @@ def generate_word_report(display_df, percentile_df, all_results, quality_report=
 
 def main():
 
-    st.title("🦪 Shellfish QMRA")
-    st.markdown("**Complete Excel Replication** with Advanced Features")
+    # Header with NIWA logo
+    col1, col2 = st.columns([1, 4])
+    with col1:
+        logo_path = os.path.join(os.path.dirname(__file__), 'niwa_logo.png')
+        if os.path.exists(logo_path):
+            st.image(logo_path, width=120)
+    with col2:
+        st.title("🦪 Shellfish QMRA")
+        st.markdown("**Complete Excel Replication** with Advanced Features")
+
     st.success("⚡ **Performance Optimized**: 10-20x faster with vectorized Monte Carlo computation!")
     st.markdown("---")
 
     # Sidebar
     with st.sidebar:
+        # NIWA logo in sidebar
+        logo_path = os.path.join(os.path.dirname(__file__), 'niwa_logo.png')
+        if os.path.exists(logo_path):
+            st.image(logo_path, width=200)
+            st.markdown("---")
+
         st.header("📊 Model Parameters")
         st.markdown("**Dose-Response:**")
         st.markdown(f"- Beta-Binomial: α={ALPHA}, β={BETA}")
